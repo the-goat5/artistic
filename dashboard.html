@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Gestion CCPE</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-VOTRE-ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-VOTRE-ID');
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tabs button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .tabs button:hover {
+            background-color: #218838;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Tableau de bord - Gestion CCPE</h1>
+        
+        <!-- Onglets -->
+        <div class="tabs">
+            <button onclick="openTab('content')">Contenu</button>
+            <button onclick="openTab('seo')">SEO</button>
+            <button onclick="openTab('stats')">Statistiques</button>
+            <button onclick="window.location.href='edit_texts.php'">Modifier les textes</button>
+            <button onclick="window.location.href='edit_images.php'">Modifier les images</button>
+            <button onclick="window.location.href='edit_contacts.php'">Modifier les contacts</button>
+        </div>
+
+        <!-- Contenu -->
+        <div id="content" class="tab-content active">
+            <h2>Gestion du contenu</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Élément</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Images</td>
+                        <td><button onclick="editImages()">Modifier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Textes</td>
+                        <td><button onclick="editTexts()">Modifier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tableaux</td>
+                        <td><button onclick="editTables()">Modifier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Contacts</td>
+                        <td><button onclick="editContacts()">Modifier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SEO -->
+        <div id="seo" class="tab-content">
+            <h2>Gestion SEO</h2>
+            <form id="seoForm">
+                <label for="metaTitle">Titre de la page :</label>
+                <input type="text" id="metaTitle" placeholder="Entrez le titre">
+
+                <label for="metaDescription">Description :</label>
+                <textarea id="metaDescription" placeholder="Entrez la description"></textarea>
+
+                <button type="button" onclick="updateSEO()">Mettre à jour</button>
+            </form>
+        </div>
+
+        <!-- Statistiques -->
+        <div id="stats" class="tab-content">
+            <h2>Statistiques du site</h2>
+            <p>Nombre de visiteurs : <strong>1,234</strong></p>
+            <p>Taux de rebond : <strong>45%</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        function editImages() {
+            alert("Modification des images...");
+        }
+
+        function editTexts() {
+            alert("Modification des textes...");
+        }
+
+        function editTables() {
+            alert("Modification des tableaux...");
+        }
+
+        function editContacts() {
+            alert("Modification des contacts...");
+        }
+
+        function updateSEO() {
+            let title = document.getElementById('metaTitle').value;
+            let description = document.getElementById('metaDescription').value;
+
+            if (title) {
+                document.title = title;
+            }
+
+            if (description) {
+                let metaDesc = document.querySelector("meta[name='description']");
+                if (!metaDesc) {
+                    metaDesc = document.createElement("meta");
+                    metaDesc.name = "description";
+                    document.head.appendChild(metaDesc);
+                }
+                metaDesc.content = description;
+            }
+
+            alert("SEO mis à jour !");
+        }
+    </script>
+</body>
+</html>

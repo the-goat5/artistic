@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCPE SAINTE PHILOMÈNE</title>
+    <link rel="stylesheet" href="garderie.css">
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-icons">
+        <i class="fa-solid fa-graduation-cap graduation-cap"></i>
+        <i class="fa-solid fa-school school"></i>
+        <i class="fa-solid fa-hippo hippo"></i>
+        <i class="fa-solid fa-book book"></i>
+        <!-- Icônes supplémentaires -->
+        <i class="fa-solid fa-apple-alt apple"></i>
+        <i class="fa-solid fa-child child"></i>
+        <i class="fa-solid fa-puzzle-piece puzzle"></i>
+        <i class="fa-solid fa-paint-brush paint-brush"></i>
+      </div>
+    
+    <!-- Vidéo en arrière-plan -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="Crèche Bienveillante pour Épanouir Votre Enfant!-VEED.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>Bienvenue à</h1>
+            <h2>CCPE Sainte Philomène</h2>
+            <p>Un environnement éducatif stimulant pour vos petits !</p>
+            <a href="#prestations" class="btn">Découvrir nos programmes</a>
+        </div>
+    </div>
+
+    <!-- En-tête -->
+    <header>
+        <div class="logo">
+            <a href="#accueil">
+                <video autoplay muted>
+                    <source src="Pre School.mp4" type="video/mp4">
+                </video>
+                <p class="logo-text"><strong>CCPE SAINTE PHILOMENE</strong></p>
+            </a>
+        </div>
+
+        <nav class="menu">
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="menu-list">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#prestations">Nos prestations</a></li>
+                <li><a href="#infos">Infos Pratiques</a></li>
+                <li><a href="#galerie">La CCPE en Images</a></li>
+                <li><a href="login.html" title="Connexion Admin">
+                    <i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bouton de contact -->
+    <button class="call-button" onclick="toggleContact()">
+        <i class="fas fa-phone"></i> Contactez-nous
+    </button>
+
+    <!-- Carte de contact -->
+    <div class="contact-card" id="contactCard">
+        <div class="contact-header">
+            <h3>Contactez-nous</h3>
+        </div>
+        <div class="contact-body">
+            <p><i class="fas fa-user"></i> Contact CCPE</p>
+            <a href="tel:+2250708670160" class="phone-link">
+                <i class="fas fa-mobile-alt"></i> +225 07 08 670 160
+            </a>
+            <a href="tel:+2250555686865" class="phone-link">
+                <i class="fas fa-mobile-alt"></i> +225 05 55 686 865
+            </a>
+            <a href="tel:+2250565654355" class="phone-link">
+                <i class="fas fa-mobile-alt"></i> +225 05 65 654 355
+            </a>
+        </div>
+    </div>
+
+    <!-- Sections principales -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h2>Bienvenue au Centre de protection de la petite enfance Sainte Philomène</h2>
+                
+            </div>
+            
+            <div class="hero-right">
+                <p><strong>Le centre de protection de la petite enfance CCPE SAINTE PHILOMÈNE</strong> est ouvert aux enfants de 3 mois à 5 ans. Nous accueillons les enfants en crèche, garderie et en classes de maternelles.</p>
+                <p>Votre nouveau <strong>CCPE SAINTE PHILOMÈNE</strong> est situé à Bingerville - Cité CEFAL.</p>
+                <p>Notre établissement est destiné à recevoir en semaine, en journée complète ou en demi-journée les enfants de moins de 5 ans en leur proposant un cadre sécurisé, équipé de jeux éducatifs permettant un éveil harmonieux de vos enfants grâce à son équipe éducative professionnelle. Plongez vos enfants dans un univers éducatif enrichissant avec notre <strong>programme bilingue ivoirien et anglais</strong>, conçu pour éveiller leur curiosité et leur ouverture sur le monde. Complété par la <strong>pédagogie Montessori</strong>, notre approche favorise l'autonomie, la créativité et l'épanouissement de chaque enfant dans un cadre bienveillant et stimulant.</p>
+            </div>
+        </div>
+    </section>
+    <section id="prestations" class="prestations">
+        <h2>NOS PRESTATIONS</h2>
+        <h4>Crèche-garderie</h4>
+        </div>
+        <table class="tableau">
+            <thead>
+                <tr>
+                    <th>Désignation</th>
+                    <th>Jours</th>
+                    <th>Âge</th>
+                    <th>Horaires</th>
+                    <th>Tarifs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
+                    <td>Demi-journée</td>
+                    <td>A partir de 03 mois</td>
+                    <td>07H00 - 12H00 ou 14H00 - 17H00</td>
+                    <td>70.000 CFA/mois</td>
+                </tr>
+                <tr>
+                    <td><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
+                    <td>Journée complète</td>
+                    <td>A partir de 03 mois</td>
+                    <td>07H00 - 17H00</td>
+                    <td>120.000 CFA/mois</td>
+                </tr>
+                <tr>
+                    <td><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
+                    <td>Demi-journée</td>
+                    <td>A partir de 03 mois</td>
+                    <td>07H00 - 12H00 ou 14H00 - 17H00</td>
+                    <td>6.000 CFA/jour</td>
+                </tr>
+                <tr>
+                    <td><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
+                    <td>Journée complète</td>
+                    <td>A partir de 03 mois</td>
+                    <td>07H00 - 17H00</td>
+                    <td>10.000 CFA/jour</td>
+                </tr>
+                <tr>
+                    <td><strong> Accueil occasionnel </strong><br>Le samedi</td>
+                    <td>.</td>
+                    <td>A partir de 03 mois</td>
+                    <td>08H00 - 13H00</td>
+                    <td>7.500 CFA/jour <br><strong>NB :</strong> 3000 CFA pour chaque heure supplémentaire</td>
+                </tr>
+                <tr>
+                    <td><strong> Garderie simple </strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5.000 CFA</td>                   
+                </tr>
+            </tbody>
+        </table>
+       <br>
+        <h4>Le Préscolaire</h4>
+        <table class="tableau">
+            <thead>
+                <tr>
+                    <th>Désignation</th>
+                    <th>Âge</th>
+                    <th>Période</th>
+                    <th>Tarifs</th>
+                    <th>Echéancier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong> Petite et moyenne section </strong></td>
+                    <td>02 à 03 ans </td>
+                    <td>Année scolaire</td>
+                    <td>280.000 CFA</td>
+                    <td>130.000 CFA à L'inscription <br>
+                        Décembre: 50.000 CFA <br>
+                        Janvier: 50.000 CFA <br>
+                        Février: 50.000 CFA</td>      
+                </tr>
+                <tr>
+                    <td><strong>Grande section </strong></td>
+                    <td>À partir de 04 ans </td>
+                    <td>Année scolaire</td>
+                    <td>280.000 CFA</td>
+                    <td>130.000 CFA à L'inscription <br>
+                        Décembre: 50.000 CFA <br>
+                        Janvier: 50.000 CFA <br>
+                        Février: 50.000 CFA</td>                       
+                </tr>
+                <tr>
+                    <td><strong> Cantine </strong></td>
+                    <td></td>
+                    <td></td>
+                    <td>30.000 CFA</td>
+                    <td>30.000 CFA à L'inscription</td>                       
+                </tr>
+               
+            </tbody>
+        </table>
+    </section>
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="service">
+                <div class="service-content">
+                    <a href="service1.html">
+                        <img src="image.png" alt="Service 1">
+                        <h3>Nourrissons</h3>
+                    </a>
+                </div>
+                <div class="service-description">
+                    <p>Accueil spécialisé pour les bébés avec un suivi personnalisé...</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="service">
+                <a href="service2.html">
+                    <img src="baby.png" alt="Service 2">
+                    <h3>Tout petits</h3>
+                </a>
+                <div class="service-description">
+                    <p>Environnement adapté aux enfants avec activités motrices et premiers apprentissages sociaux./p>
+                    <button class="close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="service">
+                <a href="service3.html"></a>
+                    <img src="abc-block.png" alt="Service 3">
+                    <h3>Préscolaire</h3>
+                </a>
+                <div class="service-description">
+                    <p>Programme éducatif complet pour les enfants à partie de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.</p>
+                    <button class="close-btn">&times;</button>
+                </div> 
+            </div>
+            <div class="service">
+                <a href="service4.html">
+                    <img src="healthy-food.png" alt="Service 4">
+                    <h3>Cantine</h3>
+                </a>
+            <div class="service-description">
+                <p>Repas équilibrés préparés sur place avec des produits frais et locaux, adaptés aux régimes spéciaux.</p>
+                <button class="close-btn">&times;</button>
+            </div>     
+            </div>
+            <div class="service">
+                <a href="service.html">
+                    <img src="playground.png" alt="Service 4">
+                    <h3>Salle de jeux</h3>
+                </a>
+            <div class="service-description">
+                <p>Espace ludique avec structures motrices, ateliers créatifs et jeux éducatifs sécurisés.</p>
+                <button class="close-btn">&times;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="infos" class="infos">
+        <h2>Informations Pratiques</h2>
+        <div class="infos-content">
+            <div class="info">
+                <h3>Pièces à fournir</h3>
+                <p>01 copies de l'extrait de naissance. <br>
+                    01 original du certificat de vaccination à jour. <br>
+                    02 Photos d'identité récente de même tirage </p> <br>
+                    <p><STRONg>NB:</STRONg> À partir de Décembre: <strong>150.000 FCFA</strong> </p><br>
+                    <h3>Horaire d'ouverture</h3>
+                    <p><strong>Matin:</strong>La crèche ouvre ses portes à <strong>07h30</strong>pour acceuillir les enfants <br>
+                        <strong>Pause déjeuner</strong>Les enfants profitent d'une pause déjeuner de<strong>12h à 14h</strong> <br>
+                        <strong>Après-midi</strong>La garderie reprend ses activités à <strong>14h</strong>et ferme à <strong>16h30</strong></p>
+            </div>
+            <div class="info">
+                <h3>Programme & Activités</h3>
+                <p><details>
+                    <summary>Programme ivoirien</summary>
+                    <p>Le programme ivoirien évalue les compétences clés des enfants (3-5 ans) à travers des activités ludiques ancrées dans la culture locale : langage (chants bilingues, objets traditionnels), motricité (parcours inspiré du baobab), découverte des fruits locaux, socialisation (jeu de rôle "le marché") et créativité (coloriage du drapeau). Conforme aux objectifs du MENETFP, il valorise l'identité ivoirienne, le bilinguisme et l'éveil à l'environnement, tout en mesurant les progrès de manière bienveillante. Idéal pour un suivi simple et adapté.</p>
+                </details>
+                <details>
+                    <summary>Initiation à l'anglais</summary>
+                    <p> Une Initiation douce et ludique des premières interactions des enfants avec la langue anglaise. Il s’articule autour d’activités sensorielles et collectives : apprentissage de mots basiques via des chants simplifiés ou des jeux de répétition. La motricité est sollicitée grâce à des consignes en anglais, associant gestes et langage. Un imagier introduit des éléments culturels, tandis que des jeux de rôle encouragent l’expression simple et la socialisation. La créativité est stimulée par le coloriage de symboles anglophones. Axé sur l’oralité, la gestuelle et le plaisir d’apprendre, ce test favorise une immersion joyeuse, sans pression de performance, pour éveiller la curiosité et la confiance envers une nouvelle langue et culture. Adaptable selon les ressources disponibles, il sert de base pour une initiation progressive et positive.</p> 
+                </details>
+                <details>
+                    <summary>Pédagogie Montessori</summary>
+                    <p>Ce test évalue l’adaptation des enfants aux principes de la pédagogie Montessori, centrés sur l’autonomie, l’apprentissage sensoriel et le respect du rythme individuel. Il repose sur des activités pratiques et concrètes : manipulation de matériel sensoriel (formes, textures, couleurs), exercices de vie pratique (verser, transvaser, boutonner) et découverte des lettres et chiffres via des outils tactiles. L’enfant est encouragé à choisir ses activités, favorisant la concentration et l’auto-discipline. L’observation porte sur sa capacité à explorer, à répéter les tâches et à travailler en autonomie, tout en respectant les règles de vie collective. Ce test vise à mesurer l’épanouissement de l’enfant dans un environnement structuré mais libre, où il développe sa confiance en soi, sa motricité fine et sa curiosité naturelle. Adaptable à chaque enfant, il sert de base pour un suivi bienveillant et personnalisé.</p> 
+                </details></p>
+            </div>
+            <div class="info">
+                <h3>Equipe pédagogique</h3>
+                <p><details>
+                    <summary>Un corps professoral qualifié pour votre enfant</summary>
+                    <p>Notre garderie dispose d’une équipe diplômée et bienveillante, formée en petite enfance. Nos professionnels créent un environnement sécurisant et stimulant pour accompagner le développement global des enfants. Attentifs à leurs besoins, ils favorisent leur épanouissement et travaillent en collaboration avec les familles. Votre enfant est entre de bonnes mains, encadré par des experts dévoués à son bien-être.
+                       <br> <strong>Priorité :</strong> épanouissement et sécurité de votre enfant.</p>
+                    </details>
+                    <details>
+                    <summary>Engagement & compassion</summary>
+                    <p>Nos professeurs s’engagent avec compassion et patience à accompagner chaque enfant dans son épanouissement, en créant un environnement bienveillant où chacun grandit à son rythme, en toute confiance. Ils sont formés à la pédagogie Montessori et aux méthodes d’apprentissage</p>
+                </details>
+                </p>
+            </div>
+            <div class="info">
+                <h3>Frais d'inscription</h3>
+                <p><details>
+                    <summary>inscription</summary>
+                    <p>Un frais d'inscription est demandée</p>
+                    </details>
+                    <details>
+                    <summary>Paiement</summary>
+                    <p>Ce frais peut être réglé en espèces ou par virement bancaire </p>
+                    </details>
+                    <details>
+                        <summary>Confirmation</summary>
+                        <p>Une fois le paiement effectué, vôtre place est comfirmé </p>
+                        </details>
+                </details>
+                </p>
+            </div>
+            <div class="info">
+                <h3>Inscription et admission</h3>
+                <p><details>
+                    <summary>Rendez-Vous</summary>
+                    <p>Prenez rendez-vous pour une visite à l'école</p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=5.332867094645692,-3.854957725016495" target="_blank" class="btn">Obtenir l'itinéraire</a>
+                    </details>
+                    <details>
+                    <summary>Document</summary>
+                    <p>Prévoyez et Fournissez les document nécessaire pour l'inscription</p>
+                    </details>
+                    <details>
+                        <summary>Admission</summary>
+                        <p>Vôtre enfant est prêt à intégrer <strong>CCPE SAINTE PHILOMENE</strong> </p>
+                        </details>
+                </details>
+                </p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="gallery">
+        <h2>Galerie Photos</h2>
+        <div class="gallery-images">
+            <img src="image1.jpg" alt="Enfants jouant">
+            <img src="image2.jpg" alt="Repas en groupe">
+            <img src="image3.jpg" alt="Activités éducatives">
+            <img src="image4.jpg" alt="Espace extérieur">
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3972.5485792133604!2d-3.854957725016495!3d5.332867094645692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMTknNTguMyJOIDPCsDUxJzA4LjYiVw!5e0!3m2!1sfr!2sci!4v1740509531778!5m2!1sfr!2sci" 
+                    width="100%" height="200" style="border:0;" 
+                    allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+2250708670160">+225 07 08 670 160</a></p>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+2250555686865">+225 05 55 686 865</a></p>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+2250565654355">+225 05 65 654 355</a></p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <p>&copy; 2025 CCPE SAINTE PHILOMENE. Designed by Artistic. Tous droits réservés.</p>
+            </div>
+            
+            <div class="footer-right">
+                <ul class="footer-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#organisation">Organisation</a></li>
+                    <li><a href="#infos">Infos Pratiques</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+ <!-- Scripts JavaScript -->
+ <script>
+    // Fonction pour afficher/masquer la carte de contact
+    function toggleContact() {
+      const contactCard = document.getElementById('contactCard');
+      contactCard.classList.toggle('active');
+    }
+
+    // Fermer la carte en cliquant à l'extérieur
+    document.addEventListener('click', function(event) {
+      const contactCard = document.getElementById('contactCard');
+      const callButton = document.querySelector('.call-button');
+
+      if (!callButton.contains(event.target) && !contactCard.contains(event.target)) {
+        contactCard.classList.remove('active');
+      }
+    });
+
+    // Animation de défilement fluide pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animation d'apparition des sections au défilement
+    const sections = document.querySelectorAll('section');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Effet de survol sur les services
+    const services = document.querySelectorAll('.service');
+    services.forEach(service => {
+      service.addEventListener('mouseenter', () => {
+        service.style.transform = 'scale(1.05)';
+        service.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+      });
+      service.addEventListener('mouseleave', () => {
+        service.style.transform = 'scale(1)';
+        service.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Gestion des descriptions de services
+      const services = document.querySelectorAll('.service');
+
+      services.forEach(service => {
+        const description = document.createElement('div');
+        description.className = 'service-description';
+        description.innerHTML = `
+          <div class="description-content">
+            <button class="close-btn">&times;</button>
+            ${getServiceDescription(service.querySelector('h3').textContent)}
+          </div>
+        `;
+        service.appendChild(description);
+
+        // Ouvrir la description
+        service.querySelector('a').addEventListener('click', (e) => {
+          e.preventDefault();
+          closeAllDescriptions();
+          description.classList.add('active');
+        });
+
+        // Fermer la description
+        description.querySelector('.close-btn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          description.classList.remove('active');
+        });
+      });
+
+      // Fermer en cliquant à l'extérieur
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.service')) {
+          closeAllDescriptions();
+        }
+      });
+
+      function closeAllDescriptions() {
+        document.querySelectorAll('.service-description').forEach(desc => {
+          desc.classList.remove('active');
+        });
+      }
+
+      // Contenu des descriptions (à personnaliser)
+      function getServiceDescription(title) {
+        const descriptions = {
+          'Nourrissons': 'Accueil spécialisé pour les bébés avec espace sécurisé, suivi pédiatrique et activités d\'éveil sensoriel.',
+          'Tout petits': 'Environnement adapté aux enfants avec activités motrices et premiers apprentissages sociaux.',
+          'Préscolaire': 'Programme éducatif complet pour les enfants à partie de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.',
+          'Cantine': 'Repas équilibrés préparés sur place avec des produits frais et locaux, adaptés aux régimes spéciaux.',
+          'Salle de jeux': 'Espace ludique avec structures motrices, ateliers créatifs et jeux éducatifs sécurisés.'
+        };
+        return `<h4>${title}</h4><p>${descriptions[title] || 'Description non disponible'}</p>`;
+      }
+    });
+
+    function toggleMenu() {
+      var menu = document.getElementById("menu-list");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

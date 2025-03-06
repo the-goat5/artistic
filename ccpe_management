@@ -1,0 +1,34 @@
+CREATE DATABASE ccpe_management;
+
+USE ccpe_management;
+
+-- Table pour les textes
+CREATE TABLE texts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    section VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL
+);
+
+-- Table pour les images
+CREATE TABLE images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    section VARCHAR(255) NOT NULL,
+    url VARCHAR(255) NOT NULL
+);
+
+-- Table pour les contacts
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL
+);
+
+-- Table pour les utilisateurs (admin)
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Ajouter un utilisateur admin (mot de passe : admin123)
+INSERT INTO users (username, password) VALUES ('admin', MD5('admin123'));

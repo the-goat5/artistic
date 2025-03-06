@@ -1,0 +1,16 @@
+# Empêcher l'accès direct aux fichiers PHP
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Autoriser l'accès uniquement à index.html et login.html
+<Files index.html>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files login.html>
+    Order Allow,Deny
+    Allow from all
+</Files>
