@@ -1583,127 +1583,107 @@ a:hover::after {
 .footer-menu a:hover {
     text-decoration: underline;
 }
-/* Ajouts/modifications mobiles */
+/* Modification du tableau pour mobile */
 @media screen and (max-width: 768px) {
-    /* Header mobile */
-    header {
-        padding: 0.5rem 1rem;
-        height: 50px;
-    }
-
-    header .logo video {
-        width: 40px;
-    }
-
-    header .logo .logo-text {
-        font-size: 13px;
-        margin-left: 5px;
-    }
-
-    /* Menu mobile */
-    nav ul {
-        top: 50px;
-        width: 100%;
-        right: 0;
-        text-align: center;
-        padding: 0;
-    }
-
-    /* Section vidéo */
-    .video-container .content {
-        width: 90%;
-    }
-
-    .video-container .content h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .video-container .content h2 {
-        font-size: 1.5rem;
-    }
-
-    .video-container .content p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .video-container .content .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    /* Sections principales */
-    section {
-        padding: 2rem 1rem;
-    }
-
-    /* Hero section */
-    .hero-content {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .hero-left h2 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .hero-right p {
-        font-size: 1rem;
-        text-align: justify;
-    }
-
-    /* Tableaux */
     .tableau {
         width: 100%;
-        overflow-x: auto;
-        display: block;
+        display: table;
+        border-collapse: collapse;
     }
 
-    /* Galerie */
-    .gallery-images {
-        grid-template-columns: 1fr;
+    .tableau thead {
+        display: table-header-group;
     }
 
-    .gallery-images img {
-        height: 250px;
+    .tableau tr {
+        display: table-row;
+        border-bottom: 1px solid #ddd;
     }
 
-    /* Services */
-    .services-container {
-        grid-template-columns: 1fr;
+    .tableau td, .tableau th {
+        display: table-cell;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.9rem;
+        word-wrap: break-word;
+        min-width: 120px;
     }
 
-    .service {
-        width: 100%;
-        margin: 0 0 1.5rem 0;
+    .tableau td:before {
+        content: none !important;
     }
 
-    /* Footer */
-    .footer-container {
-        flex-direction: column;
+    .tableau th {
+        background-color: #004aad;
+        color: white;
+        padding: 10px;
     }
 
-    .footer-map,
-    .footer-contact {
-        width: 100%;
-        margin: 1rem 0;
-        text-align: center;
+    .tableau td {
+        border-right: 1px solid #ddd;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-menu {
-        flex-wrap: wrap;
-        justify-content: center;
+    .tableau td:last-child {
+        border-right: none;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .tableau td, .tableau th {
+        font-size: 0.8rem;
+        padding: 6px;
+        min-width: 100px;
+    }
+}
+
+/* Adaptation des services pour 2 par ligne sur mobile */
+@media screen and (max-width: 768px) {
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .service {
+        width: 100% !important;
+        margin: 0;
+        min-height: 200px;
+    }
+
+    .service img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .service h3 {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
+
+/* Ajustement supplémentaire pour très petits écrans */
+@media screen and (max-width: 480px) {
+    .tableau td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .services-container {
+        gap: 0.5rem;
+    }
+
+    .service {
+        min-height: 180px;
+    }
+
+    .service img {
+        height: 100px;
+    }
+
+    .service h3 {
+        font-size: 0.9rem;
+    }
+}
     /* Ajustements supplémentaires */
     .video-container .content h1 {
         font-size: 1.8rem;
@@ -1737,7 +1717,7 @@ a:hover::after {
         right: 10px;
         width: 90%;
     }
-}
+
 
 /* Correction des hauteurs relatives */
 .video-container {

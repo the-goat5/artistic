@@ -2,13 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CCPE SAINTE PHILOMÈNE</title>
     <link rel="stylesheet" href="garderie.css">
     <!-- Icônes Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="background-icons">
@@ -105,7 +106,6 @@
     <section id="prestations" class="prestations">
         <h2>NOS PRESTATIONS</h2>
         <h4>Crèche-garderie</h4>
-        </div>
         <table class="tableau">
             <thead>
                 <tr>
@@ -118,46 +118,46 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
-                    <td>Demi-journée</td>
-                    <td>A partir de 03 mois</td>
-                    <td>07H00 - 12H00 ou 14H00 - 17H00</td>
-                    <td>70.000 CFA/mois</td>
+                    <td data-label="Désignation"><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
+                    <td data-label="Jours">Demi-journée</td>
+                    <td data-label="Âge">A partir de 03 mois</td>
+                    <td data-label="Horaires">07H00 - 12H00 ou 14H00 - 17H00</td>
+                    <td data-label="Tarifs">70.000 CFA/mois</td>
                 </tr>
                 <tr>
-                    <td><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
-                    <td>Journée complète</td>
-                    <td>A partir de 03 mois</td>
-                    <td>07H00 - 17H00</td>
-                    <td>120.000 CFA/mois</td>
+                    <td data-label="Désignation"><strong> Accueil régulier</strong> <br>Du lundi au vendredi</td>
+                    <td data-label="Jours">Journée complète</td>
+                    <td data-label="Âge">A partir de 03 mois</td>
+                    <td data-label="Horaires">07H00 - 17H00</td>
+                    <td data-label="Tarifs">120.000 CFA/mois</td>
                 </tr>
                 <tr>
-                    <td><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
-                    <td>Demi-journée</td>
-                    <td>A partir de 03 mois</td>
-                    <td>07H00 - 12H00 ou 14H00 - 17H00</td>
-                    <td>6.000 CFA/jour</td>
+                    <td data-label="Désignation"><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
+                    <td data-label="Jours">Demi-journée</td>
+                    <td data-label="Âge">A partir de 03 mois</td>
+                    <td data-label="Horaires">07H00 - 12H00 ou 14H00 - 17H00</td>
+                    <td data-label="Tarifs">6.000 CFA/jour</td>
                 </tr>
                 <tr>
-                    <td><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
-                    <td>Journée complète</td>
-                    <td>A partir de 03 mois</td>
-                    <td>07H00 - 17H00</td>
-                    <td>10.000 CFA/jour</td>
+                    <td data-label="Désignation"><strong> Accueil occasionnel </strong><br>Du lundi au vendredi</td>
+                    <td data-label="Jours">Journée complète</td>
+                    <td data-label="Âge">A partir de 03 mois</td>
+                    <td data-label="Horaires">07H00 - 17H00</td>
+                    <td data-label="Tarifs">10.000 CFA/jour</td>
                 </tr>
                 <tr>
-                    <td><strong> Accueil occasionnel </strong><br>Le samedi</td>
-                    <td>.</td>
-                    <td>A partir de 03 mois</td>
-                    <td>08H00 - 13H00</td>
-                    <td>7.500 CFA/jour <br><strong>NB :</strong> 3000 CFA pour chaque heure supplémentaire</td>
+                    <td data-label="Désignation"><strong> Accueil occasionnel </strong><br>Le samedi</td>
+                    <td data-label="Jours">.</td>
+                    <td data-label="Âge">A partir de 03 mois</td>
+                    <td data-label="Horaires">08H00 - 13H00</td>
+                    <td data-label="Tarifs">7.500 CFA/jour <br><strong>NB :</strong> 3000 CFA pour chaque heure supplémentaire</td>
                 </tr>
                 <tr>
-                    <td><strong> Garderie simple </strong></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>5.000 CFA</td>                   
+                    <td data-label="Désignation"><strong> Garderie simple </strong></td>
+                    <td data-label="Jours"></td>
+                    <td data-label="Âge"></td>
+                    <td data-label="Horaires"></td>
+                    <td data-label="Tarifs">5.000 CFA</td>                   
                 </tr>
             </tbody>
         </table>
@@ -175,33 +175,32 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong> Petite et moyenne section </strong></td>
-                    <td>02 à 03 ans </td>
-                    <td>Année scolaire</td>
-                    <td>280.000 CFA</td>
-                    <td>130.000 CFA à L'inscription <br>
+                    <td data-label="Désignation"><strong> Petite et moyenne section </strong></td>
+                    <td data-label="Âge">02 à 03 ans </td>
+                    <td data-label="Période">Année scolaire</td>
+                    <td data-label="Tarifs">280.000 CFA</td>
+                    <td data-label="Echéancier">130.000 CFA à L'inscription <br>
                         Décembre: 50.000 CFA <br>
                         Janvier: 50.000 CFA <br>
                         Février: 50.000 CFA</td>      
                 </tr>
                 <tr>
-                    <td><strong>Grande section </strong></td>
-                    <td>À partir de 04 ans </td>
-                    <td>Année scolaire</td>
-                    <td>280.000 CFA</td>
-                    <td>130.000 CFA à L'inscription <br>
+                    <td data-label="Désignation"><strong>Grande section </strong></td>
+                    <td data-label="Âge">À partir de 04 ans </td>
+                    <td data-label="Période">Année scolaire</td>
+                    <td data-label="Tarifs">280.000 CFA</td>
+                    <td data-label="Echéancier">130.000 CFA à L'inscription <br>
                         Décembre: 50.000 CFA <br>
                         Janvier: 50.000 CFA <br>
                         Février: 50.000 CFA</td>                       
                 </tr>
                 <tr>
-                    <td><strong> Cantine </strong></td>
-                    <td></td>
-                    <td></td>
-                    <td>30.000 CFA</td>
-                    <td>30.000 CFA à L'inscription</td>                       
+                    <td data-label="Désignation"><strong> Cantine </strong></td>
+                    <td data-label="Âge"></td>
+                    <td data-label="Période"></td>
+                    <td data-label="Tarifs">30.000 CFA</td>
+                    <td data-label="Echéancier">30.000 CFA à L'inscription</td>                       
                 </tr>
-               
             </tbody>
         </table>
     </section>
