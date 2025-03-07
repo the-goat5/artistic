@@ -1583,3 +1583,184 @@ a:hover::after {
 .footer-menu a:hover {
     text-decoration: underline;
 }
+/* Ajouts/modifications mobiles */
+@media screen and (max-width: 768px) {
+    /* Header mobile */
+    header {
+        padding: 0.5rem 1rem;
+        height: 50px;
+    }
+
+    header .logo video {
+        width: 40px;
+    }
+
+    header .logo .logo-text {
+        font-size: 13px;
+        margin-left: 5px;
+    }
+
+    /* Menu mobile */
+    nav ul {
+        top: 50px;
+        width: 100%;
+        right: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Section vidéo */
+    .video-container .content {
+        width: 90%;
+    }
+
+    .video-container .content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .video-container .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .video-container .content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .video-container .content .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* Sections principales */
+    section {
+        padding: 2rem 1rem;
+    }
+
+    /* Hero section */
+    .hero-content {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .hero-left h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .hero-right p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    /* Tableaux */
+    .tableau {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* Galerie */
+    .gallery-images {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-images img {
+        height: 250px;
+    }
+
+    /* Services */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-map,
+    .footer-contact {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustements supplémentaires */
+    .video-container .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .video-container .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-left h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Boutons */
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    /* Contact */
+    .call-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .contact-card {
+        bottom: 80px;
+        right: 10px;
+        width: 90%;
+    }
+}
+
+/* Correction des hauteurs relatives */
+.video-container {
+    height: 90vh;
+}
+
+/* Optimisation des images */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Amélioration de la lisibilité */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+/* Espacement mobile */
+.mobile-padding {
+    padding: 1rem;
+}
