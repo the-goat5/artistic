@@ -1586,53 +1586,41 @@ a:hover::after {
 /* Modification du tableau pour mobile */
 @media screen and (max-width: 768px) {
     .tableau {
-        width: 100%;
+        width: 100% !important;
+        margin: 0 auto;
         display: table;
-        border-collapse: collapse;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .tableau thead {
-        display: table-header-group;
+        display: none;
     }
 
     .tableau tr {
-        display: table-row;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .tableau td, .tableau th {
-        display: table-cell;
-        padding: 8px;
-        text-align: left;
-        font-size: 0.9rem;
-        word-wrap: break-word;
-        min-width: 120px;
-    }
-
-    .tableau td:before {
-        content: none !important;
-    }
-
-    .tableau th {
-        background-color: #004aad;
-        color: white;
-        padding: 10px;
+        display: block;
+        margin-bottom: 1rem;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 8px;
     }
 
     .tableau td {
-        border-right: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        font-size: 0.9rem;
+        text-align: right;
+        border: none;
     }
 
-    .tableau td:last-child {
-        border-right: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .tableau td, .tableau th {
-        font-size: 0.8rem;
-        padding: 6px;
-        min-width: 100px;
+    .tableau td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        margin-right: auto;
+        padding-right: 1rem;
+        color: #004aad;
     }
 }
 
@@ -1651,7 +1639,7 @@ a:hover::after {
     }
 
     .service img {
-        height: 150px;
+        height: 120px;
         object-fit: cover;
     }
 
@@ -1683,64 +1671,4 @@ a:hover::after {
     .service h3 {
         font-size: 0.9rem;
     }
-}
-    /* Ajustements supplémentaires */
-    .video-container .content h1 {
-        font-size: 1.8rem;
-    }
-
-    .video-container .content h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-left h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Boutons */
-    .btn {
-        display: block;
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-
-    /* Contact */
-    .call-button {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-
-    .contact-card {
-        bottom: 80px;
-        right: 10px;
-        width: 90%;
-    }
-
-
-/* Correction des hauteurs relatives */
-.video-container {
-    height: 90vh;
-}
-
-/* Optimisation des images */
-img, video {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Amélioration de la lisibilité */
-body {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-h1, h2, h3 {
-    line-height: 1.2;
-}
-
-/* Espacement mobile */
-.mobile-padding {
-    padding: 1rem;
 }
