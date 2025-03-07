@@ -1672,3 +1672,73 @@ a:hover::after {
         font-size: 0.9rem;
     }
 }
+
+/* Correction du débordement texte dans les services */
+@media screen and (max-width: 768px) {
+    .service {
+        min-height: unset; /* Suppression hauteur fixe */
+        height: auto;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .service h3 {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        margin: 8px 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .service img {
+        height: 90px;
+        min-height: 90px;
+        object-fit: cover;
+    }
+
+    .services-container {
+        gap: 8px;
+        padding: 0 5px;
+    }
+}
+
+/* Correction barre de défilement verticale indésirable */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: env(safe-area-inset-bottom); /* Pour iPhone */
+}
+
+/* Ajustement hauteur vidéo */
+.video-container {
+    height: calc(100vh - 60px); /* Déduire hauteur header */
+}
+
+/* Correction espacement header */
+body {
+    padding-top: 60px; /* Compenser header fixe */
+}
+
+/* Ajustement carte contact */
+@media screen and (max-width: 480px) {
+    .contact-card {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
