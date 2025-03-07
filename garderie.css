@@ -493,7 +493,7 @@ section.visible {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px;
+    width: calc(50% - 20px); /* Deux services par ligne sur mobile */
     overflow: hidden;
 }
 
@@ -852,6 +852,11 @@ section.visible {
         right: 20px;
         width: 90%;
     }
+
+    /* Services : Deux par ligne sur mobile */
+    .service {
+        width: calc(50% - 20px); /* Deux services par ligne */
+    }
 }
 
 @media (max-width: 480px) {
@@ -913,6 +918,11 @@ section.visible {
         bottom: 70px;
         right: 10px;
         width: 95%;
+    }
+
+    /* Services : Deux par ligne sur mobile */
+    .service {
+        width: calc(50% - 20px); /* Deux services par ligne */
     }
 }
 
@@ -1018,7 +1028,7 @@ section.visible {
 }
 
 .background-icons i {
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgba(0, 0, 0, 0.1);
     position: absolute;
 }
