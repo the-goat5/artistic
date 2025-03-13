@@ -47,7 +47,7 @@
             <h1>Bienvenue à</h1>
             <h2>CCPE Sainte Philomène</h2>
             <p>Un environnement éducatif stimulant pour vos petits !</p>
-            <a href="#prestations" class="btn">Découvrir nos programmes</a>
+            <a href="#prestations,prestations-mobile" class="btn">Découvrir nos programmes</a>
         </div>
     </div>
 
@@ -242,7 +242,7 @@
                 <p><strong>Jours:</strong> Lundi au vendredi</p>
                 <p><strong>Âge:</strong> À partir de 3 mois</p>
                 <p><strong>Horaires:</strong> 07H00 - 17H00</p>
-                <p class="price">120.000 CFA/mois</p>
+                <p class="price"><strong>Tarifs:</strong>120.000 CFA/mois</p>
             </div>
     
             <div class="mobile-card">
@@ -250,7 +250,7 @@
                 <p><strong>Jours:</strong> Lundi au vendredi</p>
                 <p><strong>Âge:</strong> À partir de 3 mois</p>
                 <p><strong>Horaires:</strong> 07H00 - 12H00 ou 14H00 - 17H00</p>
-                <p class="price">6.000 CFA/jour</p>
+                <p class="price"><strong>Tarifs:</strong>6.000 CFA/jour</p>
             </div>
     
             <div class="mobile-card">
@@ -258,19 +258,19 @@
                 <p><strong>Jours:</strong> Lundi au vendredi</p>
                 <p><strong>Âge:</strong> À partir de 3 mois</p>
                 <p><strong>Horaires:</strong> 07H00 - 17H00</p>
-                <p class="price">10.000 CFA/jour</p>
+                <p class="price"><strong>Tarifs:</strong>10.000 CFA/jour</p>
             </div>
     
             <div class="mobile-card">
                 <h3>Accueil occasionnel (Samedi)</h3>
                 <p><strong>Horaires:</strong> 08H00 - 13H00</p>
                 <p class="price">7.500 CFA/jour</p>
-                <p class="note">3000 CFA/heure supplémentaire</p>
+                <p class="note"><strong>Tarifs:</strong>3000 CFA/heure supplémentaire</p>
             </div>
     
             <div class="mobile-card">
                 <h3>Garderie simple</h3>
-                <p class="price">5.000 CFA</p>
+                <p class="price"><strong>Tarifs:</strong>5.000 CFA</p>
             </div>
         </div>
     
@@ -282,8 +282,9 @@
                 <h3>Petite et moyenne section</h3>
                 <p><strong>Âge:</strong> 2 à 3 ans</p>
                 <p><strong>Période:</strong> Année scolaire</p>
-                <p class="price">280.000 CFA</p>
+                <p class="price"><strong>Scolarité:</strong>280.000 CFA</p>
                 <div class="echeancier">
+                    <p>Echéancier</p>
                     <p>130.000 CFA à l'inscription</p>
                     <p>Décembre: 50.000 CFA</p>
                     <p>Janvier: 50.000 CFA</p>
@@ -295,8 +296,9 @@
                 <h3>Grande section</h3>
                 <p><strong>Âge:</strong> À partir de 4 ans</p>
                 <p><strong>Période:</strong> Année scolaire</p>
-                <p class="price">280.000 CFA</p>
+                <p class="price"><strong>Scolarité:</strong>280.000 CFA</p>
                 <div class="echeancier">
+                    <p>Echéancier</p>
                     <p>130.000 CFA à l'inscription</p>
                     <p>Décembre: 50.000 CFA</p>
                     <p>Janvier: 50.000 CFA</p>
@@ -306,7 +308,7 @@
     
             <div class="mobile-card">
                 <h3>Cantine</h3>
-                <p class="price">30.000 CFA</p>
+                <p class="price"><strong>Tarifs:</strong>30.000 CFA</p>
                 <div class="echeancier">
                     <p>Paiement unique à l'inscription</p>
                 </div>
@@ -467,6 +469,12 @@
         </div>
     </section>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <!-- Pied de page -->
     <footer class="footer">
         <div class="footer-container">
@@ -601,12 +609,34 @@
         const descriptions = {
           'Nourrissons': 'Accueil spécialisé pour les bébés avec espace sécurisé, suivi pédiatrique et activités d\'éveil sensoriel.',
           'Tout petits': 'Environnement adapté aux enfants avec activités motrices et premiers apprentissages sociaux.',
-          'Préscolaire': 'Programme éducatif complet pour les enfants à partie de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.',
+          'Préscolaire': 'Programme éducatif complet pour les enfants à partir de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.',
           'Cantine': 'Repas équilibrés préparés sur place avec des produits frais et locaux, adaptés aux régimes spéciaux.',
           'Salle de jeux': 'Espace ludique avec structures motrices, ateliers créatifs et jeux éducatifs sécurisés.'
         };
         return `<h4>${title}</h4><p>${descriptions[title] || 'Description non disponible'}</p>`;
       }
+
+      // Lightbox functionality
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeLightbox = document.querySelector('.close-lightbox');
+
+      document.querySelectorAll('.gallery-images img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+        });
+      });
+
+      closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
     });
 
     function toggleMenu() {
