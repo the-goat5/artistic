@@ -1185,22 +1185,21 @@ a:hover::after {
 
 .footer-container {
     display: flex;
+    flex-direction: row; /* Default to row for larger screens */
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1100px;
+    max-width: 1200px; /* Adjusted to match the hero section */
     margin: 0 auto;
     padding: 20px;
 }
 
-.footer-map {
+.footer-map, .footer-contact {
     flex: 1;
     min-width: 300px;
-    margin-right: 20px;
+    margin: 0 20px; /* Adjusted for better alignment */
 }
 
 .footer-contact {
-    flex: 1;
-    min-width: 300px;
     text-align: left;
 }
 
@@ -1491,20 +1490,18 @@ a:hover::after {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1100px;
+    max-width: 1200px; /* Adjusted to match the hero section */
     margin: 0 auto;
     padding: 20px;
 }
 
-.footer-map {
+.footer-map, .footer-contact {
     flex: 1;
     min-width: 300px;
-    margin-right: 20px;
+    margin: 0 20px; /* Adjusted for better alignment */
 }
 
 .footer-contact {
-    flex: 1;
-    min-width: 300px;
     text-align: left;
 }
 
@@ -1847,20 +1844,18 @@ a:hover::after {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1100px;
+    max-width: 1200px; /* Adjusted to match the hero section */
     margin: 0 auto;
     padding: 20px;
 }
 
-.footer-map {
+.footer-map, .footer-contact {
     flex: 1;
     min-width: 300px;
-    margin-right: 20px;
+    margin: 0 20px; /* Adjusted for better alignment */
 }
 
 .footer-contact {
-    flex: 1;
-    min-width: 300px;
     text-align: left;
 }
 
@@ -2126,3 +2121,198 @@ body {
     }
 }
 
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Change to column for mobile devices */
+    }
+
+    .footer-map {
+        order: 1; /* Display map first */
+    }
+
+    .footer-contact {
+        order: 2; /* Display contact section second */
+    }
+}
+
+/* Ajouts CSS */
+.video-wrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.play-button::before {
+    content: '';
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #4299e1;
+}
+
+.video-wrapper:hover .play-button {
+    background: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Cache le bouton quand la vidéo joue */
+.playing .play-button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Section Nos Activités Éducatives */
+.nos-activites {
+    padding: 4rem 2rem;
+    background: none;
+    text-align: center;
+}
+
+.titre-section {
+    font-size: 2.5rem;
+    color:#ff8c00;
+    margin-bottom: 3rem;
+    position: relative;
+    animation: floatTitle 3s ease-in-out infinite;
+font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #003d8f, #ff8c00);
+    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari) */
+    background-clip: text;
+    color: transparent; /* Rend le texte transparent pour voir le dégradé */
+    display: inline-block; /* Nécessaire pour certains navigateurs */
+}
+
+
+.activite-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.activite-grid.reverse {
+    flex-direction: row-reverse;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.activite-video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+filter: blur(5px); /* Flouter la vidéo initialement */
+    transition: filter 0.3s ease;
+}
+
+.video-wrapper.playing .activite-video {
+    filter: none; /* Enlever le flou quand la vidéo joue */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background:#ff8c00;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.play-button::before {
+    content: '';
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #003d8f;
+}
+
+.video-wrapper:hover .play-button {
+    background: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-wrapper.playing .play-button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.description {
+    width: 50%;
+    text-align: left;
+}
+
+.description h3 {
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .activite-grid {
+        flex-direction: column;
+    }
+
+    .video-wrapper, .description {
+        width: 100%;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+@keyframes floatTitle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
