@@ -2303,6 +2303,10 @@ font-family: 'Roboto', sans-serif;
         flex-direction: column;
     }
 
+    .activite-grid.reverse {
+        flex-direction: column;
+    }
+
     .video-wrapper, .description {
         width: 100%;
     }

@@ -42,7 +42,7 @@
       
     <!-- Vidéo en arrière-plan -->
     <div class="video-container">
-        <video autoplay muted loop>
+        <video autoplay muted loop loading="lazy">
             <source src="Vidéo home.mp4" type="video/mp4">
         </video>
         <div class="content">
@@ -324,7 +324,7 @@
             <div class="service">
                 <div class="service-content">
                     <a href="service1.html">
-                        <img src="image.png" alt="Service 1">
+                        <img src="image.png" alt="Service 1" loading="lazy">
                         <h3>Nourrissons</h3>
                     </a>
                 </div>
@@ -334,43 +334,52 @@
                 </div>
             </div>
             <div class="service">
-                <a href="service2.html">
-                    <img src="baby.png" alt="Service 2">
-                    <h3>Tout petits</h3>
-                </a>
+                <div class="service-content">
+                    <a href="service2.html">
+                        <img src="baby.png" alt="Service 2" loading="lazy">
+                        <h3>Tout petits</h3>
+                    </a>
+                </div>
                 <div class="service-description">
-                    <p>Environnement adapté aux enfants avec activités motrices et premiers apprentissages sociaux./p>
+                    <p>Environnement adapté aux enfants avec activités motrices et premiers apprentissages sociaux.</p>
                     <button class="close-btn">&times;</button>
                 </div>
             </div>
             <div class="service">
-                <a href="service3.html"></a>
-                    <img src="abc-block.png" alt="Service 3">
-                    <h3>Préscolaire</h3>
-                </a>
+                <div class="service-content">
+                    <a href="service3.html">
+                        <img src="abc-block.png" alt="Service 3" loading="lazy">
+                        <h3>Préscolaire</h3>
+                    </a>
+                </div>
                 <div class="service-description">
-                    <p>Programme éducatif complet pour les enfants à partie de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.</p>
+                    <p>Programme éducatif complet pour les enfants à partir de 02 ans incluant pré-lecture, logique mathématique et exploration scientifique.</p>
                     <button class="close-btn">&times;</button>
                 </div> 
             </div>
             <div class="service">
-                <a href="service4.html">
-                    <img src="healthy-food.png" alt="Service 4">
-                    <h3>Cantine</h3>
-                </a>
-            <div class="service-description">
-                <p>Repas équilibrés préparés sur place avec des produits frais et locaux, adaptés aux régimes spéciaux.</p>
-                <button class="close-btn">&times;</button>
-            </div>     
+                <div class="service-content">
+                    <a href="service4.html">
+                        <img src="healthy-food.png" alt="Service 4" loading="lazy">
+                        <h3>Cantine</h3>
+                    </a>
+                </div>
+                <div class="service-description">
+                    <p>Repas équilibrés préparés sur place avec des produits frais et locaux, adaptés aux régimes spéciaux.</p>
+                    <button class="close-btn">&times;</button>
+                </div>     
             </div>
             <div class="service">
-                <a href="service.html">
-                    <img src="playground.png" alt="Service 4">
-                    <h3>Salle de jeux</h3>
-                </a>
-            <div class="service-description">
-                <p>Espace ludique avec structures motrices, ateliers créatifs et jeux éducatifs sécurisés.</p>
-                <button class="close-btn">&times;</button>
+                <div class="service-content">
+                    <a href="service.html">
+                        <img src="playground.png" alt="Service 5" loading="lazy">
+                        <h3>Salle de jeux</h3>
+                    </a>
+                </div>
+                <div class="service-description">
+                    <p>Espace ludique avec structures motrices, ateliers créatifs et jeux éducatifs sécurisés.</p>
+                    <button class="close-btn">&times;</button>
+                </div>
             </div>
         </div>
     </section>
@@ -381,7 +390,7 @@
         
         <div class="activite-grid">
             <div class="video-wrapper">
-                <video class="activite-video" poster="montessori.jpg">
+                <video class="activite-video" poster="montessori.jpg" loading="lazy" controls>
                     <source src="GAL1 (2).mp4" type="video/mp4">
                 </video>
                 <div class="play-button" aria-label="Lire la vidéo"></div>
@@ -393,7 +402,7 @@
         </div>
         <div class="activite-grid reverse">
             <div class="video-wrapper">
-                <video class="activite-video" poster="anglais.jpg">
+                <video class="activite-video" poster="anglais.jpg" loading="lazy" controls>
                     <source src="GAL1 (1).mp4" type="video/mp4">
                 </video>
                 <div class="play-button" aria-label="Lire la vidéo"></div>
@@ -491,31 +500,31 @@
     <div class="container">
         <div class="row gallery-images">
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.29_5b7d3910.jpg" alt="Enfants déssinant">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.29_5b7d3910.jpg" alt="Enfants déssinant" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.30_5f0e36e6.jpg" alt="Les enfants en salles de classe">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.30_5f0e36e6.jpg" alt="Les enfants en salles de classe" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.30_0611ccc9.jpg" alt="Photo avec enseignante">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.30_0611ccc9.jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.30_a69943b7.jpg" alt="Photo avec enseignante">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.30_a69943b7.jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="GAL1 (4).jpg" alt="Photo avec enseignante">
+                <img src="GAL1 (4).jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.31_5c6bb20f.jpg" alt="Photo avec enseignante">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.31_5c6bb20f.jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="WhatsApp Image 2025-03-12 à 12.05.31_6b2cb4a0.jpg" alt="Photo avec enseignante">
+                <img src="WhatsApp Image 2025-03-12 à 12.05.31_6b2cb4a0.jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="GAL1 (2).jpg" alt="Photo avec enseignante">
+                <img src="GAL1 (2).jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
             <div class="col-6 col-md-3 gallery-item">
-                <img src="GAL1 (3).jpg" alt="Photo avec enseignante">
+                <img src="GAL1 (3).jpg" alt="Photo avec enseignante" loading="lazy">
             </div>
         </div>
     </div>
@@ -546,7 +555,7 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-left">
-            <p>&copy; 2025 CCPE SAINTE PHILOMENE. Designed by Artistic. Tous droits réservés.</p>
+            <p>&copy; 2025 CCPE SAINTE PHILOMENE. Designed by Artistic(DSA). Tous droits réservés.</p>
         </div>
     </div>
 </footer>
@@ -697,10 +706,17 @@
           const playButton = wrapper.querySelector('.play-button');
 
           // Clic sur le wrapper vidéo
-          wrapper.addEventListener('click', () => togglePlay(video, wrapper));
+          wrapper.addEventListener('click', (e) => {
+              if (e.target !== playButton) {
+                  togglePlay(video, wrapper);
+              }
+          });
 
           // Clic sur le bouton play
-          playButton.addEventListener('click', () => togglePlay(video, wrapper));
+          playButton.addEventListener('click', (e) => {
+              e.stopPropagation();
+              togglePlay(video, wrapper);
+          });
 
           function togglePlay(video, wrapper) {
               if (currentVideo && currentVideo !== video) {
@@ -725,6 +741,35 @@
               currentVideo = null;
           });
       });
+
+      // Pause/play videos when section is in/out of view
+      const activitesSection = document.querySelector('.nos-activites');
+      const observerOptions = {
+          root: null,
+          threshold: 0.1
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  videoWrappers.forEach(wrapper => {
+                      const video = wrapper.querySelector('video');
+                      if (video.paused && wrapper.classList.contains('playing')) {
+                          video.play();
+                      }
+                  });
+              } else {
+                  videoWrappers.forEach(wrapper => {
+                      const video = wrapper.querySelector('video');
+                      if (!video.paused) {
+                          video.pause();
+                      }
+                  });
+              }
+          });
+      }, observerOptions);
+
+      sectionObserver.observe(activitesSection);
     });
 
     function toggleMenu() {
